@@ -84,7 +84,7 @@ function App() {
         <input placeholder='Seu nome' autoFocus type="text" name="resp" id="resp" value={resp} onChange={setarResp} />
         <p>Loja:</p>
         <select name="loja" id="loja" value={loja} onChange={hChange}>
-          <option value="MS FILINTO">Matriz</option>
+          <option value="MS FILINTO">Filinto</option>
           <option value="MS ROI LLA">Rondonópolis</option>
           <option value="MS COMODORO">Comodoro</option>
           <option value="MS LUCAS">Lucas</option>
