@@ -8,7 +8,7 @@ const listRef = collection(db, 'teste')
 function App() {
   const [texto, setTexto] = useState('')
   const [resp, setResp] = useState('')
-  const [loja, setLoja] = useState('Matriz')
+  const [loja, setLoja] = useState('MS FILINTO')
   const hChange = (e) => {
     setLoja(e.target.value)
   }
