@@ -12,7 +12,7 @@ function App() {
   const hChange = (e) => {
     setLoja(e.target.value)
   }
-  const [categoria, setCategoria] = useState('Diversos')
+  const [categoria, setCategoria] = useState('Acessorios')
   const categoriaChange = (e) => {
     setCategoria(e.target.value)
   }
@@ -84,7 +84,7 @@ function App() {
         <input placeholder='Seu nome' autoFocus type="text" name="resp" id="resp" value={resp} onChange={setarResp} />
         <p>Loja:</p>
         <select name="loja" id="loja" value={loja} onChange={hChange}>
-          <option value="MS FILINTO">Matriz</option>
+          <option value="MS FILINTO">Filinto</option>
           <option value="MS ROI LLA">Rondonópolis</option>
           <option value="MS COMODORO">Comodoro</option>
           <option value="MS LUCAS">Lucas</option>
@@ -119,10 +119,8 @@ function App() {
         </select>
         <p>Categoria</p>
         <select name="categoria" id="categoria" value={categoria} onChange={categoriaChange}>
-          <option value="Diversos">Diversos</option>
-          <option value="Chips">Chips</option>
-          <option value="ProdutosVivo">Produtos Vivo</option>
           <option value="Acessorios">Acessórios</option>
+          <option value="Outros">Outros</option>
         </select>
         <p></p>
         <textarea placeholder='Apenas um item por linha&#10;exemplo 2&#10;item 3&#10;123123123&#10;456456456' name="text" id="text" cols="30" rows="10" onChange={(e) => { setTexto((e.target.value).split('\n')) }}></textarea>
