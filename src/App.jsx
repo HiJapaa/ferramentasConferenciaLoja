@@ -123,7 +123,7 @@ function App() {
           <option value="Outros">Outros</option>
         </select>
         <p></p>
-        <textarea placeholder='Apenas um item por linha&#10;exemplo 2&#10;item 3&#10;123123123&#10;456456456' name="text" id="text" cols="30" rows="10" onChange={(e) => { setTexto((e.target.value).split('\n')) }}></textarea>
+        <textarea placeholder='Apenas um item por linha&#10;2222222&#10;3333333&#10;4444444&#10;5555555' name="text" id="text" cols="30" rows="10" onChange={(e) => { setTexto((e.target.value).split('\n')) }}></textarea>
 
         <button type='submit'>Salvar</button>
       </form>
