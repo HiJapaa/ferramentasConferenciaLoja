@@ -90,7 +90,6 @@ function App() {
           <option value="MS LUCAS">Lucas</option>
           <option value="MS CÁCERES">Cáceres</option>
           <option value="MS SORRISO">Sorriso</option>
-          <option value="ESTOQUE ADM">Estoque ADM</option>
           <option value="MS VG Shopping">VG Shopping</option>
           <option value="MS BARRA DO GARÇAS">Barra do Garças</option>
           <option value="MS COUTO">Couto</option>
@@ -102,7 +101,6 @@ function App() {
           <option value="MS JACIARA">Jaciara</option>
           <option value="MS ALTO ARAGUAIA">Alto Araguaia</option>
           <option value="MS ARIQUEMES">Ariquemes</option>
-          <option value="ESTOQUE ADM RO">ADM RO</option>
           <option value="MS QUERÊNCIA">Querência</option>
           <option value="MS JARU">Jaru</option>
           <option value="MS JI-PARANA">Ji-Parana</option>
