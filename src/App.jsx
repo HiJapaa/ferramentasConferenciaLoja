@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { db } from './services/firebaseConnection'
 import { addDoc, collection, getDocs, getDoc, doc } from 'firebase/firestore'
 
@@ -76,6 +76,49 @@ function App() {
     setResp(e.target.value)
   }
 
+
+  const textareaRef = useRef(null);
+
+  useEffect(() => {
+    const textarea = textareaRef.current;
+
+    const handleCopy = (e) => {
+      e.preventDefault();
+    };
+
+    const handleCut = (e) => {
+      e.preventDefault();
+    };
+
+    const handlePaste = (e) => {
+      e.preventDefault();
+    };
+
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'v' || e.key === 'x')) {
+        e.preventDefault();
+      }
+    };
+
+    if (textarea) {
+      textarea.addEventListener('copy', handleCopy);
+      textarea.addEventListener('cut', handleCut);
+      textarea.addEventListener('paste', handlePaste);
+      textarea.addEventListener('keydown', handleKeyDown);
+    }
+
+    // Cleanup function to remove event listeners when the component unmounts
+    return () => {
+      if (textarea) {
+        textarea.removeEventListener('copy', handleCopy);
+        textarea.removeEventListener('cut', handleCut);
+        textarea.removeEventListener('paste', handlePaste);
+        textarea.removeEventListener('keydown', handleKeyDown);
+      }
+    };
+  }, []);
+
+
   return (
     <>
       <h1>Cadastro</h1>
@@ -121,7 +164,7 @@ function App() {
           <option value="Outros">Outros</option>
         </select>
         <p></p>
-        <textarea placeholder='Apenas um item por linha&#10;2222222&#10;3333333&#10;4444444&#10;5555555' name="text" id="text" cols="30" rows="10" onChange={(e) => { setTexto((e.target.value).split('\n')) }}></textarea>
+        <textarea ref={textareaRef} placeholder='Apenas um item por linha&#10;2222222&#10;3333333&#10;4444444&#10;5555555' name="text" id="text" cols="30" rows="10" onChange={(e) => { setTexto((e.target.value).split('\n')) }}></textarea>
 
         <button type='submit'>Salvar</button>
       </form>
