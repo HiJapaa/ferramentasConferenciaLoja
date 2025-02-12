@@ -157,6 +157,8 @@ function App() {
           <option value="MS PV - JOSE AMADOR">Jose Amador</option>
           <option value="MS CONFRESA">Confresa</option>
           <option value="MS NOVA XAVANTINA">Nova Xavantina</option>
+          <option value="MS GO - 24 OUTUBRO">24 de Outubro</option>
+          <option value="MS GO - PLAZA DORO">Plaza Doro</option>
         </select>
         <p>Categoria</p>
         <select name="categoria" id="categoria" value={categoria} onChange={categoriaChange}>
